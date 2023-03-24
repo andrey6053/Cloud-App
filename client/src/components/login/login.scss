@@ -1,0 +1,35 @@
+@import "../../utils/colors.scss";
+
+.login {
+   margin-top: 250px;
+   display: flex;
+   flex-direction: column;
+   width: 500px;
+   align-items: center;
+   background-color: white;
+   border-radius: 20px;
+   padding: 30px;
+   align-self: center;
+
+   &__header {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+   }
+
+   &__btn {
+      border-radius: 12px;
+      background-color: #566885;
+      border: none;
+      color: white;
+      cursor: pointer;
+      align-self: end;
+      margin-top: 10px;
+      padding: 5px 50px;
+   }
+
+   input {
+      font-size: 18px;
+      margin: 15px 0px 0px 0px;
+   }
+}

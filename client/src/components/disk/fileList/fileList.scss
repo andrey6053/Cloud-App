@@ -1,0 +1,60 @@
+@import "../../../utils/colors.scss";
+
+
+.fileList {
+   margin: 20px 0px;
+
+   &__header {
+      display: grid;
+      grid-template-columns: 1fr 4fr repeat((4, 1fr));
+      align-items: center;
+      justify-items: center;
+      height: 50px;
+      border-bottom: 3px solid $font-color;
+   }
+
+   &__name {
+      grid-column-start: 2;
+   }
+
+   &__date {
+      grid-column-start: 5;
+   }
+
+   &__size {
+      grid-column-start: 6;
+   }
+}
+
+.file-enter-active {
+   animation: file-enter 500ms forwards;
+}
+
+@keyframes file-enter {
+   0% {
+      opacity: 0;
+      transform: translateY(-50%);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.tileList {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+   grid-column-gap: 40px;
+   grid-row-gap: 20px;
+   justify-items: start;
+}
+
+.fileList-empty {
+   font-size: 24px;
+   height: calc(100% - 80px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}

@@ -1,0 +1,92 @@
+@import "../../../../utils/colors.scss";
+
+
+.file {
+   display: grid;
+   grid-template-columns: 1fr minmax(0, 4fr) repeat((4, 1fr));
+   align-items: center;
+   justify-items: center;
+   cursor: pointer;
+   border-bottom: 3px solid $font-color;
+   height: 65px;
+
+   &__icon {
+      width: 45px;
+   }
+
+   &:hover {
+      background-color: $background-color;
+   }
+
+   &__name {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+      grid-column-start: 2;
+      justify-self: self-start;
+   }
+
+   &__date {
+      grid-column-start: 5;
+   }
+
+   &__size {
+      grid-column-start: 6;
+   }
+
+   &:hover &__date {
+      grid-column-start: 3;
+   }
+
+   &:hover &__size {
+      grid-column-start: 4;
+   }
+
+   &__btn {
+      width: 58px;
+      height: 34px;
+      border-radius: 30px;
+      border: 2px solid $font-color;
+      cursor: pointer;
+      display: none;
+   }
+
+   &:hover &__download {
+      grid-column-start: 5;
+      display: block;
+   }
+
+   &__download {
+      &:hover {
+         background-color: $background-color;
+      }
+
+      transition: 0.5s;
+   }
+
+   &:hover &__delete {
+      grid-column-start: 6;
+      display: block;
+
+   }
+
+   &__btnBasket {}
+}
+
+.tile {
+   display: flex;
+   text-align: center;
+   cursor: pointer;
+
+   &__icon {
+      width: 75px;
+   }
+
+   &__name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100px;
+      font-size: 18px;
+   }
+}

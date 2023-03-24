@@ -1,0 +1,63 @@
+@import '../../utils/colors.scss';
+
+.uploader {
+   width: 300px;
+   height: 300px;
+   bottom: 0;
+   right: 0;
+   background-color: $font-color;
+   border-radius: 30px;
+   padding: 15px;
+   position: fixed;
+   margin: 5px;
+   overflow-y: auto;
+   overflow-x: hidden;
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__title {
+      color: white;
+      font-size: 1.2rem;
+   }
+
+   &__btnClose {
+      cursor: pointer;
+      padding: 3px;
+      color: white;
+   }
+}
+
+.uploadFile {
+   background-color: $background-color;
+   margin: 3px 0px;
+   padding: 5px 10px;
+   border-radius: 8px;
+
+   &__name {
+      word-wrap: break-word;
+      color: $font-color;
+   }
+
+   &__progressBar {
+      height: 1rem;
+      background-color: $font-color;
+      border-radius: 30px;
+      margin: 3px 0;
+      display: flex;
+   }
+
+   &__line {
+      background-color: green;
+      border-radius: 30px;
+   }
+
+   &__progress {
+      position: absolute;
+      left: 50%;
+      color: $background-color;
+   }
+}

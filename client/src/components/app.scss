@@ -1,0 +1,36 @@
+@import "../utils/colors.scss";
+
+* {
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
+   color: $font-color;
+}
+
+body {
+   background-color: $background-color;
+}
+
+.app {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   user-select: none;
+}
+
+#root {
+   width: 100%;
+   height: 100%;
+}
+
+.wrap {
+   height: calc(100vh - 50px);
+   width: 100%;
+   padding: 0px 100px;
+   display: flex;
+   flex-direction: column;
+}
+
+img {
+   pointer-events: none;
+}
